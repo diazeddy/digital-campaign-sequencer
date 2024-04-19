@@ -1,5 +1,8 @@
 # digital-campaign-sequencer
 This is a simple Ruby on Raills application to design digital-campaign-sequencer.
+
+[Database Recording](https://www.loom.com/share/64da6f81349145f6aa97ef90a60ae0ca)
+
 ![1.png](./images/1.png)
 ![2.png](./images/2.png)
 
