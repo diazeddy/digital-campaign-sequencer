@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  namespace :api do
+    resources :email, only: [:create]
+    resources :time_delay, only: [:create]
+    resources :sequence_item, only: [:create]
+    resources :sequencer, only: [:create, :index, :show]
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
