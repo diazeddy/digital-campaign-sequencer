@@ -1,6 +1,7 @@
 class Api::SequencerController < ApplicationController
   def create
-    @sequencer = Sequencer.new(sequencer_params)
+    @json_data = JSON.parse(request.body.read)
+    @sequencer = Sequencer.new(title: @json_data["title"], trigger: @json_data["trigger"])
     if @sequencer.save
       render json: @sequencer
     else
@@ -24,16 +25,5 @@ class Api::SequencerController < ApplicationController
         }
       }
     }
-  end
-
-  def show
-    @sequencer = Sequencer.find(params[:id])
-    render json: @sequencer
-  end
-
-  private
-
-  def sequencer_params
-    params.require(:sequencer).permit(:title, :trigger)
   end
 end
