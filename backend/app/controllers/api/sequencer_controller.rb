@@ -5,7 +5,7 @@ class Api::SequencerController < ApplicationController
     if @sequencer.save
       render json: @sequencer
     else
-      render error: { error: 'Unable to create email' }, status: 400
+      render error: { error: 'Unable to create sequencer' }, status: 400
     end
   end
 
