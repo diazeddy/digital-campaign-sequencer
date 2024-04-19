@@ -25,7 +25,7 @@ const SequencerView = ({sequencer}: SequencerViewProps) => {
                             </div>
                             <div className="text-xl">
                                 {
-                                    item.itemType === ItemType.email ? item.email?.description : `Delay ${item.time_delay?.period} day${item.time_delay?.period === 1 ? "" : "s"}`
+                                    item.itemType === ItemType.email ? item.email?.description : `Wait ${item.time_delay?.period} day${item.time_delay?.period === 1 ? "" : "s"}`
                                 }
                             </div>                            
                         </div>
